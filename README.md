@@ -33,7 +33,8 @@
     4. 不需要修改前端地址,前端的axios的所有请求都通过网关地址连接通信，如该了网关的api-getway模块的端口号需要到 
         前端项目下的/utils/request.js文件修改请求getway的路径
     5. 打开 Intellij IDEA中打开xiaohu项目,采用 Run Dashboard 启动所有模块(如果启动多个导致卡顿，可以单个功能的参考，api-getway模块一定要起来)
-    6. 这些模块都起来，要测试模块中的注册，视频点播，对象存储需修改 service-oss,servcie-vedio的oss.properties的配置数据,注册模块的短信功能依赖阿里短信服务，
+    6. 这些模块都起来，要测试模块中的注册，视频点播，对象存储需修改 service-oss,servcie-vedio的oss.properties的配置数据,
+        注册模块的短信功能依赖阿里短信服务，
         需自己修改service层的配置，自己的阿里云短信配置，如果没有配置，可以采用redis模仿存储ZSet类型来模拟服务端有短信功能
     
  #### 项目说明
