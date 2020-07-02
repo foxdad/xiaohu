@@ -21,13 +21,13 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
   #    nacos的注册中心
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
   #服务名
-  application:
-    name: service-cms
+#  application:
+#    name: service-cms
   #redis配置
   redis:
     host: 49.233.148.75

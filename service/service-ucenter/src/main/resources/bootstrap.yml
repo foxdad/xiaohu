@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: service-statistics
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848  #写自己的nacos端口
+        file-extension: yaml
+#        nacos命名空间的id
+#        namespace: a58887d9-6681-4cf0-9bfb-7a770efe45a7
+

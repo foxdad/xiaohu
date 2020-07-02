@@ -5,7 +5,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: localhost:8848  #写自己的nacos端口
 ## 最大上传单个文件大小：默认1M
 ## 最大置总上传的数据大小 ：默认10M
   servlet:

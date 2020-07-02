@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: service-sms
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848  #写自己的nacos端口
+        file-extension: yaml
+#        nacos的名称id
+#        namespace: a58887d9-6681-4cf0-9bfb-7a770efe45a7
+
