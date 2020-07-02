@@ -30,7 +30,7 @@
     1. clone项目到本地 
     2. 导入数据库脚本
     3. 修改application-dev.yml文件下面的数据库路径Nacos(不是连接远程地址就可以不用修改)
-    4. 不需要修改前端地址,前端的axios的所有请求都通过网关地址连接通信，如该了网关的api-getway模块的端口号需要到 
+    4. 不需要修改前端地址,前端的axios的所有请求都通过网关地址连接通信，修改了网关的api-getway模块的端口号需要到 
         前端项目下的/utils/request.js文件修改请求getway的路径
     5. 打开 Intellij IDEA中打开xiaohu项目,采用 Run Dashboard 启动所有模块(如果启动多个导致卡顿，可以单个功能的参考，api-getway模块一定要起来)
     6. 这些模块都起来，要测试模块中的注册，视频点播，对象存储需修改 service-oss,servcie-vedio的oss.properties的配置数据,
