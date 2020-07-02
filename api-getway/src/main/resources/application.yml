@@ -1,0 +1,54 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: api-getway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: SERVICE-ACL
+          uri: lb://service-acl
+          predicates:
+            - Path=/acl/** # 路径匹配
+        - id: SERVICE-EDU # edu
+          uri: lb://service-edu
+          predicates:
+            - Path=/edu/** # 路径匹配
+        - id: SERVICE-ORDER
+          uri: lb://service-order #order
+          predicates:
+            - Path=/order/** # 路径匹配
+        - id: SERVICE-OSS
+          uri: lb://service-oss #oss
+          predicates:
+            - Path=/oss/** # 路径匹配
+        - id: SERVICE-UCENTER
+          uri: lb://service-ucenter #ucenter
+          predicates:
+            - Path=/api/ucenter/**
+        - id: SERVICE-SMS
+          uri: lb://service-sms #sms
+          predicates:
+            - Path=/sms/** # 路径匹配
+        - id: SERVICE-STATISTICS
+          uri: lb://service-statistics #statistics
+          predicates:
+            - Path=/daily/** # 路径匹配
+        - id: SERVICE-CMS
+          uri: lb://service-cms #cms
+          predicates:
+            - Path=/cms/** # 路径匹配
+        - id: SERVICE-VEDIO
+          uri: lb://service-vedio #statistics
+          predicates:
+            - Path=/vedio/** # 路径匹配
+        - id: SERVICE-BLOG
+          uri: lb://service-blog #blog
+          predicates:
+            - Path=/blog/** # 路径匹配
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

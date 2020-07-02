@@ -1,0 +1,10 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: service-oss
+#nacos注册中心配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

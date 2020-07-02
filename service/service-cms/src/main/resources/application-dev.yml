@@ -1,0 +1,53 @@
+#端口号
+server:
+  port: 8004
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///guli_cms?serverTimezone=GMT%2B8
+    username: root
+    password: 11111111
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 60000
+      idle-timeout: 500000
+      max-lifetime: 540000
+      maximum-pool-size: 12
+      minimum-idle: 10
+      pool-name: GuliHikariPool
+  #      json返回的时间字段转换
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  #    nacos的注册中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  #服务名
+  application:
+    name: service-cms
+  #redis配置
+  redis:
+    host: 49.233.148.75
+    port: 6379
+    password: xiaohu
+    database: 0
+    timeout: 120000
+    lettuce:
+      pool:
+        max-idle: 5
+        min-idle: 0
+        max-active: 20
+        max-wait: -1
+
+mybatis-plus:
+  configuration: #mybatis的日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #配置mapper xml文件的路径
+  mapper-locations: classpath:xml/*.xml
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
