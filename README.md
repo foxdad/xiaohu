@@ -1,6 +1,7 @@
 # xiaohu
 有小伙伴一起写个更好的Deo吗？
 扫码加微信（微信ID：Fox Miss Your），备注小狐，讨论模块的增加与改版。
+点个小星星在往下阅读啊
 ![image](https://jiuge-guli.oss-cn-shanghai.aliyuncs.com/mmqrcode1593145350347.png)
 
   ## 项目介绍
